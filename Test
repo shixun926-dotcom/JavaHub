@@ -1,0 +1,33 @@
+//今天写关于正则表达式中遇到的一个问题
+//且看以下代码
+
+public class Demo1 {
+    public  static void main(String[] args) {
+        String str1 = "Hello World";
+        String str2 = "HelloWorld";
+     //如果此处直接调用会报错
+
+    }
+
+    //验证用户的名字是否满足需求，大小写字母，数字，下划线_ 4-16
+    public boolean method1(String str){
+        boolean b = str.matches("[a-zA-Z0-9_]{4,16}");
+        return b;
+    }
+}
+
+
+//为什么没办法直接调用方法，因为没有创建该类的对象
+//两种解决方法
+//1创建对象后调用
+public static void main(String[] args) {
+    Demo1 d = new Demo1();
+
+    boolean result = d.method1("abc_12");
+
+    System.out.println(result);
+}
+//2直接改为静态加上static
+public static boolean method1(String str){}
+//在主函数就可以直接调用
+boolean result = method1("abc_12");
