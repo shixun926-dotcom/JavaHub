@@ -31,3 +31,24 @@ public static void main(String[] args) {
 public static boolean method1(String str){}
 //在主函数就可以直接调用
 boolean result = method1("abc_12");
+
+//---------------------------------------------------------------------------------------
+
+//继正则表达式之后又学到了如何爬取网站前端信息，在这里将测试案例写出，之后如需使用，只需要更改正则规则和网址即可
+//下面是代码演示,注释将不再赘述
+URL url = new URL("网址");
+URLConnection conn = url.openConnection();
+BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+String line;
+String regex = "这里写正则表达式的规则"
+Pattern pattern = Pattern.compile(regex);
+while((line = br.readLine()) != null){
+    Matcher matcher = pattern.matcher(line);
+    whlie(matcher:find()){
+       sout(matcher.group());
+    }
+
+}
+
+
+
