@@ -1,6 +1,6 @@
 package com05.Study04Demo.D1;
 
-public class Demo1 {
+public class PatternDemo1 {
     public  static void main(String[] args) {
         String str1 = "Hello World";
         String str2 = "34132420060204055X";
